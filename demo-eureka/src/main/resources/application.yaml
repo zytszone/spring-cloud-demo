@@ -1,0 +1,13 @@
+server:
+  port: 9080 # 注册中心占用9080端口
+eureka:
+  instance:
+    hostname: zhangyutao-server
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #其实就是 http://localhost:8080/eureka/
+  server:
+    enable-self-preservation: false #关闭安全模式
