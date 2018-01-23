@@ -1,0 +1,12 @@
+server:
+  port: 9082
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://zhangyutao-server:9080/eureka/
+  instance:
+    prefer-ip-address: true
+    
